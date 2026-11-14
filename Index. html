@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assistant Business</title>
+<style>
+body {
+  font-family: Arial;
+  background: #101827;
+  color: white;
+  padding: 20px;
+}
+.container {
+  max-width: 450px;
+  margin: auto;
+  background: #1b2940;
+  padding: 20px;
+  border-radius: 15px;
+}
+h1 {color: #61d6a5;}
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: none;
+}
+button {
+  background: #61d6a5;
+  font-weight: bold;
+}
+#result {
+  background: #101827;
+  padding: 15px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Assistant Business 🚀</h1>
+<p>Ton assistant intelligent pour les entreprises.</p>
+
+<h3>Créer une publicité</h3>
+
+<input id="product" placeholder="Nom du produit">
+
+<textarea id="details" placeholder="Description du produit"></textarea>
+
+<button onclick="generate()">Générer ma publicité</button>
+
+<h3>Résultat :</h3>
+<div id="result">Ton texte apparaîtra ici.</div>
+</div>
+
+<script>
+function generate() {
+ let product = document.getElementById("product").value;
+ let details = document.getElementById("details").value;
+
+ if (!product || !details) {
+  alert("Remplis les deux champs !");
+  return;
+ }
+
+ document.getElementById("result").innerText =
+ "✨ Découvrez " + product +
+ " !\n\n" + details +
+ "\n\nContactez-nous pour commander !";
+}
+</script>
+
+</body>
+</html>
